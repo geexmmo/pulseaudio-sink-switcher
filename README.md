@@ -27,7 +27,7 @@ sudo pacman -S pulseaudio-utils libnotify
 Add keybinds to your i3-wm
 ```
 # Using media keys (adjust key names based on 'xev' output)
-bindsym XF86AudioOutput exec /usr/local/bin/audio-device-toggle.sh
+bindsym XF86AudioOutput exec $scripts/switch-sink.sh
 # Or custom key binding to switch audio output device
-bindsym Mod4+A exec /usr/local/bin/audio-device-toggle.sh
+bindsym Mod4+A exec $scripts/switch-sink.sh
 ```
