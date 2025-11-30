@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set the notification display time in milliseconds (e.g., 2000ms = 2 seconds)
+NOTIFICATION_TIMEOUT_MS=1500
+
 # Function to extract human-readable description from pactl output
 get_sink_description() {
     local sink_name=$1
@@ -39,5 +42,5 @@ if [ -n "$next_sink" ]; then
   sleep 0.1 
   description=$(get_sink_description "$next_sink")
   
-  notify-send -i audio-card "Audio Output Switched To:" "$description"
+  notify-send -t "$NOTIFICATION_TIMEOUT_MS" -i audio-card "Audio Output Switched To:" "$description"
 fi
