@@ -29,5 +29,6 @@ Add keybinds to your i3-wm
 # Using media keys (adjust key names based on 'xev' output)
 bindsym XF86AudioOutput exec $scripts/switch-sink.sh
 # Or custom key binding to switch audio output device
-bindsym Mod4+A exec $scripts/switch-sink.sh
+# Win+G just like Windows does lol
+bindsym Mod4+G exec $scripts/switch-sink.sh
 ```
